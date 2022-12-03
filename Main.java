@@ -9,12 +9,17 @@ public class Main {
 	public static PrintWriter out;
 
 	//MyScanner class for faster input
-	public static class MyScanner {
+	public static class FastScanner {
 		BufferedReader br;
 		StringTokenizer st;
 
-		public MyScanner() {
-			br = new BufferedReader(new InputStreamReader(System.in));
+		public FastScanner() {
+			try {
+				br = new BufferedReader(new InputStreamReader(System.in));	
+			}
+			catch (FileNotFoundException e) {
+				e.printStackTrace();
+			}
 		}
 
 		String next() {
@@ -54,8 +59,9 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		MyScanner sc = new MyScanner();
+		FastScanner sc = new FastScanner();
 		out = new PrintWriter(new BufferedOutputStream(System.out));
+		
 		//starting the solution below...
 		int n = sc.nextInt(); //reading input as an integer
 		long k = sc.nextLong(); //reading input as long
@@ -65,6 +71,7 @@ public class Main {
 		int result = 3 * n;
 		out.println(result); //print via PrintWriter
 		//finishing the solution code here...
+		
 		out.close(); 
 	}
 }
