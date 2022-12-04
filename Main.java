@@ -5,21 +5,23 @@ import java.util.*;
 
 public class Main {
 
-	//PrintWriter for faster output
-	public static PrintWriter out;
+	public static PrintWriter out; //PrintWriter for faster output
 
-	//MyScanner class for faster input
-	public static class FastScanner {
+	public static class FastScanner { //MyScanner class for faster input
 		BufferedReader br;
 		StringTokenizer st;
 
 		public FastScanner() {
-			try {
-				br = new BufferedReader(new InputStreamReader(System.in));	
-			}
-			catch (FileNotFoundException e) {
-				e.printStackTrace();
-			}
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+		
+		public FastScanner(String s) {
+		    try {
+		        br = new BufferedReader(new FileReader(s));    
+		    }
+		    catch (FileNotFoundException e) {
+		        e.printStackTrace();
+		    }
 		}
 
 		String next() {
@@ -27,7 +29,7 @@ public class Main {
 				try {
 					st = new StringTokenizer(br.readLine());
 				}
-				catch (IOException as e) {
+				catch (IOException e) {
 					e.printStackTrace();
 				}
 			}
@@ -39,7 +41,7 @@ public class Main {
 		}
 
 		long nextLong() {
-			return Integer.parseLong(next());
+			return Long.parseLong(next());
 		}
 
 		double nextDouble() {
@@ -51,25 +53,20 @@ public class Main {
 			try {
 				str = br.readLine();
 			}
-			catch (IoException e) {
+			catch (IOException e) {
 				e.printStackTrace();
 			}
 			return str;
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws java.lang.Exception {
 		FastScanner sc = new FastScanner();
 		out = new PrintWriter(new BufferedOutputStream(System.out));
 		
 		//starting the solution below...
-		int n = sc.nextInt(); //reading input as an integer
-		long k = sc.nextLong(); //reading input as long
-		double d = sc.nextDouble(); //reading input as double
-		String str = sc.next(); //reading input as String
-		String s = sc.nextLine(); //reading whole line as string
-		int result = 3 * n;
-		out.println(result); //print via PrintWriter
+		
+
 		//finishing the solution code here...
 		
 		out.close(); 
