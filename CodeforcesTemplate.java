@@ -63,9 +63,11 @@ public class Codeforces {
 	public static void main(String[] args) throws java.lang.Exception {
 		FastScanner sc = new FastScanner();
 		out = new PrintWriter(new BufferedOutputStream(System.out));
+		
 		//starting the solution below...
 		
-    //finishing the solution code here...
+    	//finishing the solution code here...
+		
 		out.close(); 
 	}
 }
